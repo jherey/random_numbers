@@ -2,12 +2,15 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-const Form = () => (
+import { getRandomPhoneNumbers } from '../../actions/phoneNumberActions';
+
+const Form = ({ getPhoneNumbers }) => (
   <Formik
     initialValues = {{ number: '' }}
     onSubmit={(values, { setSubmitting, resetForm }) => {
       setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
+        const generatedNumbers = getRandomPhoneNumbers(values.number);
+        getPhoneNumbers(generatedNumbers);
         setSubmitting(false);
         resetForm();
       }, 500);
@@ -57,20 +60,8 @@ const Form = () => (
         </form>
       )
     }}
-    
+
   </Formik>
 )
 
 export default Form;
-
-// {({ handleSubmit, handleChange, values }) => (
-//   <form onSubmit={handleSubmit}>
-//     <input
-//       onChange={handleChange} 
-//       value={values.name}
-//       type="text"
-//       placeholder="Name">
-//     </input>
-//     <button>Submit</button>
-//   </form>
-// )}
