@@ -56,7 +56,7 @@ class NumberGenerator extends Component{
   }
 
   onPageChange= (page) => {
-    const { numbers,  perPage} = this.state;
+    const { numbers,  perPage } = this.state;
     const currentPage = page.selected + 1;
     const offset = (currentPage - 1) * perPage;
     const numbersPerPage = numbers.slice(offset).slice(0, perPage);
