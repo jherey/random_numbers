@@ -4,6 +4,8 @@ import * as Yup from 'yup';
 
 import { getRandomPhoneNumbers } from '../../actions/phoneNumberActions';
 
+import './form.scss';
+
 const Form = ({ getPhoneNumbers }) => (
   <Formik
     initialValues = {{ number: '' }}
@@ -35,9 +37,6 @@ const Form = ({ getPhoneNumbers }) => (
       } = props;
       return (
         <form onSubmit={handleSubmit}>
-          <label htmlFor="number" style={{ display: 'block' }}>
-            Number of phone numbers
-          </label>
           <input
             id="number"
             placeholder="Enter the number of phone numbers you want"
@@ -52,6 +51,7 @@ const Form = ({ getPhoneNumbers }) => (
               <div className="input-feedback">{errors.number}</div>
             )}
           <button
+            className="submitButton"
             type="submit"
             disabled={isSubmitting}
           >

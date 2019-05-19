@@ -10,6 +10,5 @@ describe('Home component', () => {
     expect(wrapper.find('Fragment').length).toBe(1);
     expect(wrapper.find('Header').length).toBe(1);
     expect(wrapper.find('NumberGenerator').length).toBe(1);
-    expect(wrapper.find('Footer').length).toBe(1);
   });
 });

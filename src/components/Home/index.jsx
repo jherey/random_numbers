@@ -1,16 +1,12 @@
 import React, { Fragment } from 'react';
 
-import NumberGenerator from '../NumberGenerator';
 import { Header } from '../Header';
-import Footer from '../Footer';
-
-import './home.scss';
+import NumberGenerator from '../NumberGenerator';
 
 const Home = () => (
   <Fragment>
     <Header />
     <NumberGenerator />
-    <Footer />
   </Fragment>
 );
 

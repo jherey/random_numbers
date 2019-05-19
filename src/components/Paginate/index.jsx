@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactPagination from 'react-paginate';
 
+import './paginate.scss';
+
 const Pagination = ({
   pageChange,
   perPage,
@@ -12,12 +14,12 @@ const Pagination = ({
     nextLabel="next"
     breakLabel={ <a href="pagination">...</a> }
     breakClassName="break-me"
-    pageCount={ totalPages }
-    marginPagesDisplayed={ currentPage }
-    pageRangeDisplayed={ perPage }
-    onPageChange={ pageChange }
-    containerClassName="pagination"
-    subContainerClassName="pages pagination"
+    pageCount={totalPages}
+    marginPagesDisplayed={currentPage}
+    pageRangeDisplayed={perPage}
+    onPageChange={pageChange}
+    containerClassName="paginate"
+    subContainerClassName="pages paginate"
     activeClassName="active"
     />
 )

@@ -1,0 +1,98 @@
+#results {
+  padding: 15px;
+}
+
+.styled-select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 140px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+  width: 268px;
+}
+
+.rounded {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.black   { background-color: #000; }
+.black select   { color: #fff; }
+
+button.download {
+  float: right;
+  font-size: 14px;
+  width: 100px;
+  background-color: #E64C66;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: -4px 4px 8px #333;
+  min-height: 30px;
+}
+
+button.download:hover {
+  background-color: (#E64C66 - 5);
+  box-shadow: -2px 2px 4px #333;
+  cursor: pointer;
+}
+
+button.download:active {
+  box-shadow: none;
+  background-color: (#E64C66 - 15);
+}
+
+.row {
+  display: flex;
+  margin: 25px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 80px;
+  padding: 5px;
+  text-align: center;
+  color: #000;
+}
+
+#figure {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  color: #E64C66;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 0 auto;
+}
+
+thead {
+  color: #000
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h3.text {
+  color: #000;
+}

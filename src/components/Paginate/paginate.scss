@@ -1,0 +1,29 @@
+.paginate li {
+	position: relative;
+	display: block;
+	padding: .5rem .75rem;
+	margin: auto 0;
+	line-height: 1.25;
+	background-color: #E64C66;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+
+.paginate li.active {
+	background-color: #1B4F72;
+	a {
+		outline: none;
+	}
+}
+
+.paginate li a {
+	color: #fff;
+}
+
+.paginate {
+	display: flex;
+	list-style: none;
+  border-radius: .5rem;
+	margin: 20px 37%;
+	padding: 20px;
+}

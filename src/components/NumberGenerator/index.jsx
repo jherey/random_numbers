@@ -9,7 +9,7 @@ import {
   getMaximumPhoneNumbers, getMinimumPhoneNumbers, sortAscending, sortDescending,
 } from '../../actions/phoneNumberActions';
 
-class NumberGenerator extends Component{
+class NumberGenerator extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -73,12 +73,13 @@ class NumberGenerator extends Component{
     } = this.state;
 
     return (
-      <div>
+      <div className='form'>
         <Form getPhoneNumbers={this.getPhoneNumbers} />
         {
-          numbers.length > 0 &&
+          numbersPerPage.length > 0 &&
             <Results
-              numbers={numbersPerPage}
+              numbersPerPage={numbersPerPage}
+              numbers={numbers}
               sortPhoneNumbers={this.sortPhoneNumbers}
               fileDownload={this.fileDownload}
               minGeneratedNumber={minGeneratedNumber}

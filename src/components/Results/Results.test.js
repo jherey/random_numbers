@@ -8,9 +8,11 @@ import {
 
 describe('Results component', () => {
   const numbers = getRandomPhoneNumbers(5);
+  const numbersPerPage = getRandomPhoneNumbers(5);
 
   const props = {
     numbers,
+    numbersPerPage,
     minGeneratedNumber: getMinimumPhoneNumbers(numbers),
     maxGeneratedNumber: getMaximumPhoneNumbers(numbers),
   }
@@ -20,7 +22,6 @@ describe('Results component', () => {
 
     expect(wrapper.find('select').length).toBe(1);
     expect(wrapper.find('button').length).toBe(1);
-    expect(wrapper.find('h4').length).toBe(2);
   });
 
   it('should render results', () => {
